@@ -1,0 +1,192 @@
+.stackWrap, .queueWrap, .llWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 0;
+  animation: fade-in 0.3s ease;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 140px;
+}
+
+.stackNode {
+  width: 140px;
+  height: 44px;
+  background: var(--panel2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.top {
+  background: rgba(0, 229, 255, 0.1) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 16px rgba(0,229,255,0.2);
+}
+
+.top .nodeVal { color: var(--accent); }
+
+.stackBase {
+  width: 160px;
+  height: 3px;
+  background: var(--border2);
+  border-radius: 2px;
+  margin-top: 3px;
+}
+
+.queue {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.queueNode {
+  width: 80px;
+  height: 56px;
+  background: var(--panel2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.front {
+  background: rgba(108, 255, 138, 0.08) !important;
+  border-color: var(--accent3) !important;
+}
+
+.back {
+  background: rgba(0, 229, 255, 0.08) !important;
+  border-color: var(--accent) !important;
+}
+
+.front .nodeVal { color: var(--accent3); }
+.back .nodeVal { color: var(--accent); }
+
+.queueArrow {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+}
+
+.ll {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.llItem {
+  display: flex;
+  align-items: center;
+}
+
+.llNode {
+  width: 70px;
+  height: 60px;
+  background: var(--panel2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.head {
+  border-color: var(--accent) !important;
+  background: rgba(0,229,255,0.08) !important;
+  box-shadow: 0 0 14px rgba(0,229,255,0.15);
+}
+
+.tail {
+  border-color: var(--accent4) !important;
+  background: rgba(167,139,250,0.08) !important;
+}
+
+.head .nodeVal { color: var(--accent); }
+.tail .nodeVal { color: var(--accent4); }
+
+.llArrow {
+  color: var(--border2);
+  font-size: 16px;
+  padding: 0 4px;
+  font-weight: 700;
+}
+
+.llNull {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-left: 4px;
+  color: var(--border2);
+  font-size: 14px;
+}
+
+.null {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.nodeVal {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.badge {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+.frontBadge { color: var(--accent3); background: rgba(108,255,138,0.1); }
+.backBadge  { color: var(--accent);  background: rgba(0,229,255,0.1); }
+.headBadge  { color: var(--accent);  background: rgba(0,229,255,0.1); }
+.tailBadge  { color: var(--accent4); background: rgba(167,139,250,0.1); }
+
+/* top badge inline */
+.stackNode .badge {
+  position: absolute;
+  right: -42px;
+  color: var(--accent3);
+  background: rgba(108,255,138,0.1);
+}
+
+.dsInfo {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.empty {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 30px;
+}
